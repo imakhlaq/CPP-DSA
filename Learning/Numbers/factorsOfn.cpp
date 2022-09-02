@@ -45,25 +45,25 @@ int main(){
 //     cout<<"prime";
 
 // better solution for prime
-int count=0;
-for(int i=1;i*i<=n;i++){
-    if(i%n==0){
+// int count=0;
+// for(int i=1;i*i<=n;i++){
+//     if(i%n==0){
 
-        count++;
+//         count++;
 
-    }
-    if(i != n/i){
-        count++;
-    }
+//     }
+//     if(i != n/i){
+//         count++;
+//     }
 
-}
-if(count==2){
-    cout<<"prime";
+// }
+// if(count==2){
+//     cout<<"prime";
 
-}
-else{
-    cout<<"not prime";
-}
+// }
+// else{
+//     cout<<"not prime";
+// }
 
 
     return 0;
