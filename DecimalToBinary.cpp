@@ -18,7 +18,7 @@ int main(){
 
 
       double n;
-    cout<<"enter the number : ";
+    cout<<"enter the Decimal number : ";
     cin>>n;
         
         cout<<decimalToBinary(n);

@@ -5,7 +5,7 @@ int binaryToDecimal(int n){
           int res=0;
           int pow=0;
         while(n!=0){
-            long digit= n%10;
+           int digit=n%10;
             if(digit==1){
               res=res+powf(2,pow);
 
@@ -24,7 +24,7 @@ int binaryToDecimal(int n){
 int main(){
 
 
-        long n;
+       int n;
         cout<<"enter binary number : ";
         cin>>n;
          
