@@ -24,16 +24,16 @@ int main(){
 //     cout<<endl<<count;
 
 //even btter approach for factor
-// int count=0;
-//     for(int i=1;i*i<=n;i++){
-//         if(n%i ==0){
-//             count++;
-//             if(i!= n/i){
-//                 count++;
-//             }
-//         }
-//     }
-//     cout<<endl<<count;
+int count=0;
+    for(int i=1;i*i<=n;i++){
+        if(n%i ==0){
+            count++;
+            if(i!= n/i){
+                count++;
+            }
+        }
+    }
+    cout<<endl<<count;
 
 //================ prime or not
 // for(int i=2;i<n;i++){
@@ -47,16 +47,18 @@ int main(){
 // better solution for prime
 // int count=0;
 // for(int i=1;i*i<=n;i++){
-//     if(i%n==0){
+//     if(n%i ==0){
 
 //         count++;
-
-//     }
-//     if(i != n/i){
+//         if(i!= n/i){
 //         count++;
 //     }
+
+//     }
+    
 
 // }
+// cout<<count;
 // if(count==2){
 //     cout<<"prime";
 
