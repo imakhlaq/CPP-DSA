@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int binaryToDecimal(int n){
-          int res=0;
+long binaryToDecimal(int n){
+          long res=0;
           int pow=0;
         while(n!=0){
            int digit=n%10;
@@ -24,7 +24,7 @@ int binaryToDecimal(int n){
 int main(){
 
 
-       int n;
+       long n;
         cout<<"enter binary number : ";
         cin>>n;
          

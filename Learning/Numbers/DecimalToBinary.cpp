@@ -2,7 +2,7 @@
 using namespace std;
 
 int decimalToBinary(int n){
-         double res=0;
+         int res=0;
          int pow=0;
         while(n!=0){
             int digit=n%2;
@@ -17,7 +17,7 @@ int decimalToBinary(int n){
 int main(){
 
 
-      double n;
+      int n;
     cout<<"enter the Decimal number : ";
     cin>>n;
         
