@@ -1,35 +1,65 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+
+
+const int ZEN_MODE=1;
+const int MORMAL_MODE=0;
+const int EXIT_MODE=2;
+
+
+
+
+    int factorial(int num1){
+        int fac=1;
+       for(int i=1;i<=num1;i++){
+        fac=fac*i;
+       }
+
+       return fac;
+       
+}
 int zenMode(){
   do{
+
+  
+  
+  string s;
+  cin>>s;
+  if(s=="normal"){
+    return MORMAL_MODE;
+  }
+  if(s=="exit"){
+    return EXIT_MODE;
+  }
+
   int num1;
-  cin>>num1;
+  num1=stoi(s);
+
+  
    string operation;
    cin>>operation;
    if(operation=="+"||operation=="-"|| operation=="*"|| operation=="/"){
    int num2;
    cin>>num2;
    if(operation=="+"){
-    cout<<num1+num2;
+    cout<<num1+num2<<endl;
    }
    if(operation=="-"){
-    cout<<num1-num2;
+    cout<<num1-num2<<endl;
    }
    if(operation=="*"){
-    cout<<num1*num2;
+    cout<<num1*num2<<endl;
    }
    if(operation=="/"){
-    cout<<num1/num2;
+    cout<<num1/num2<<endl;
    }
    }
    else{
     if(operation=="!"){
-      int fac=1;
-       for(int i=1;i<=num1;i++){
-        fac=fac*i;
-       }
-       cout<<num1<<" != "<<fac<<endl;
+      cout<<factorial(num1);
+      
     
    }
    if(operation=="!!"){
@@ -42,11 +72,12 @@ int zenMode(){
         num1=num1/5;
       }
 
-      cout<<" !!= "<<zeros<<endl;
+      cout<<zeros<<endl;
     
    }
    }
-  }while(true);
+   }while(true);
+  
    
 
 
@@ -109,10 +140,7 @@ int normalMode(){
         cout<<"Enter A Number : ";
         cin>>num;
         
-       int fac=1;
-       for(int i=1;i<=num;i++){
-        fac=fac*i;
-       }
+       int fac=factorial(num);
        cout<<num<<" != "<<fac<<endl;
             
         }
@@ -136,16 +164,18 @@ int normalMode(){
       }
       else if(choice==7){
         
-       return 1;
+       return ZEN_MODE;
 
 
       }
-      return 0;
+      return MORMAL_MODE;
         
     }
    
     else{
+      
       cout<< "========Exit======="<< endl;
+      return EXIT_MODE;
       
 
       }
@@ -155,16 +185,20 @@ int normalMode(){
 
 
 int main(){
+
   int mode=0;
   
 
     while(true){
-      if(mode==0){
+      if(mode==MORMAL_MODE){
         mode=normalMode();
       }
       
-      else if (mode==1){
+      else if (mode==ZEN_MODE){
         mode=zenMode();
+      }
+      else if(mode==EXIT_MODE){
+        break;
       }
     }
   
