@@ -189,7 +189,7 @@ int main(){
   int mode=0;
   
 
-    while(true){
+   do{
       if(mode==MORMAL_MODE){
         mode=normalMode();
       }
@@ -197,10 +197,9 @@ int main(){
       else if (mode==ZEN_MODE){
         mode=zenMode();
       }
-      else if(mode==EXIT_MODE){
-        break;
-      }
-    }
+      
+      
+    }while(mode !=EXIT_MODE);
   
 
 
