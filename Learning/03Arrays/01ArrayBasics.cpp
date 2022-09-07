@@ -14,11 +14,11 @@ int main(){
         int arr[n];//while declaring and array You can use constants or varibles
 
         //taking elements from the user
-        for (int i = 0; i < n; i++)
+        for (int index = 0; index < n; index++)
         {
 
-            cout<<"Enter the element "<<i+1<<" : ";
-            cin>>arr[i];
+            cout<<"Enter the element "<<index+1<<" : ";
+            cin>>arr[index];
         }
         
 
@@ -44,3 +44,8 @@ int main(){
    //when you create the array you can inisilize it and in this you can ommit the the value in side []. cpp will figure out accorfing the elemts in { }. not in 2D[][](you have to specify one ). in 3D(you have to specify 2last [][][])
    // dynamic memory allocatiom
    //int arr[]=new int 
+
+
+
+   // how to inisilize whole array with 0
+   //int arr[20]={0};
