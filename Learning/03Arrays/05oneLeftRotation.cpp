@@ -32,7 +32,7 @@ int main(){
                 cout<<endl<<x;
             }
 
-
+ 
 
         return 0;
     }
