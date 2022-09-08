@@ -11,17 +11,38 @@ int main(){
 
         int rows;
         int colums;
-        cout<<" Enter rows and Coloms :";
-        cin>>rows>>colums;
+       
+        cout<<" Enter rows  :";
+        cin>>rows;
+        cout<<" Enter Coloms :";
+        cin>>colums;
 
         for(int i=0;i<rows;i++){
-            
 
+
+            vector<int> temp;// creating a row vector
+
+
+            for(int j=0;j<colums;j++){
+                    cout<<"Element :";
+                     int elements;
+                    cin>>elements;
+                    temp.push_back(elements);//pushing value into row vector
+            }
+
+            vec.push_back(temp);//inserting a verctor(row vector) into main vector
         }
 
 
 
+            //printing the the vector
 
+            for(int i=0;i<rows;i++){
+                for(int j=0;j<colums;j++){
+                    cout<<vec[i][j]<<" ";
+                }
+                cout<<endl;
+            }
 
         return 0;
     }
