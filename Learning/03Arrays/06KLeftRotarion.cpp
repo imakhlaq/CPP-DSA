@@ -1,18 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
-  // void rotate(int arr[],int start,int end){
+  void rotate(int arr[],int start,int end){
 
-  //   while(start<end){
-  //       swap(arr[start],arr[end]);
-  //       start++;
-  //       end--;
-  //   }
-  // }
-  //   void kLeftRotation(int arr[],int n,int k){
-  //        rotate(arr,0,k-1);
-  //        rotate(arr,k,n-1);
-  //        rotate(arr,0,n-1);
-  //   }
+    while(start<end){
+        swap(arr[start],arr[end]);
+        start++;
+        end--;
+    }
+  }
+    void kLeftRotation(int arr[],int n,int k){
+         rotate(arr,0,k-1);
+         rotate(arr,k,n-1);
+         rotate(arr,0,n-1);
+    }
 
 int main(){
 
@@ -32,12 +32,12 @@ int main(){
         cin>>k;
         k=k%n;
         
-            // kLeftRotation(arr,n,k);
+            kLeftRotation(arr,n,k);
 
 
-      // for(int x:arr){
-      //   cout<<x<<" ";
-      // }
+      for(int x:arr){
+        cout<<x<<" ";
+      }
 
 
 

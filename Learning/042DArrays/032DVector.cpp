@@ -19,9 +19,7 @@ int main(){
 
         for(int i=0;i<rows;i++){
 
-
             vector<int> temp;// creating a row vector
-
 
             for(int j=0;j<colums;j++){
                     cout<<"Element :";
@@ -33,12 +31,10 @@ int main(){
             vec.push_back(temp);//inserting a verctor(row vector) into main vector
         }
 
-
-
             //printing the the vector
 
-            for(int i=0;i<rows;i++){
-                for(int j=0;j<colums;j++){
+            for(int i=0;i<vec.size();i++){
+                for(int j=0;j<vec[0].size();j++){
                     cout<<vec[i][j]<<" ";
                 }
                 cout<<endl;
