@@ -74,7 +74,7 @@ int main(){
 
         vector<vector<int>>vecC=addMatrix(vecA,vecB);
 
-// //display
+//display
 
         for(int i=0;i<vecC.size();i++){
             for(int j=0;j<vecC[0].size();j++){
