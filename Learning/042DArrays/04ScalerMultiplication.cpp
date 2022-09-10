@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
+//multiplying a digit with a matrix
 
 
 int main(){

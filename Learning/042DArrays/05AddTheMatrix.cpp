@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+// rows and col are same
 
 vector<vector<int>> addMatrix(vector<vector<int>> vecA,vector<vector<int>> vecB ){
     
@@ -12,8 +13,7 @@ vector<vector<int>> addMatrix(vector<vector<int>> vecA,vector<vector<int>> vecB 
 
         for(int j=0;j<vecA[0].size();j++){
             int c;
-
-            c=vecA[i][j]+vecA[i][j];
+            c=vecA[i][j]+vecB[i][j];
 
             temp.push_back(c);
 
