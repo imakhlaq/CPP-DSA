@@ -4,17 +4,21 @@ using namespace std;
     vector<vector<int>> matrixMulti(vector<vector<int>> veca,vector<vector<int>> vecb){
 
 
-        vector<vector<int>>ans(veca.size(),vector<int>(vecb[0].size()));
+         vector<vector<int>>ans(veca.size(),vector<int>(vecb[0].size()));
+        // vector<vector<int>>ans;
 
         for(int i=0;i<veca.size();i++){
-            for(int j=0;j<vecb[0].size();j++){
+            // vector<int> temp;
+            for(int j=0;j<veca[0].size();j++){
                 int sum=0;
                 for(int k=0;k<veca[0].size();k++){
                    sum=sum+veca[i][k]*vecb[k][j]; 
                 }
                 ans[i][j]=sum;
+                // temp.push_back(sum);
                 
             }
+            // ans.push_back(temp);
         }
         return ans;
 
@@ -51,9 +55,9 @@ int main(){
 
         vector<vector<int>>vecb;
 
-        for(int i=0;i<rows;i++){
+        for(int i=0;i<rows2;i++){
             vector<int>temp;
-            for(int j=0;j<cols;j++){
+            for(int j=0;j<cols2;j++){
                 int value;
                 cout<<"Enter the Value :";
                 cin>>value;
