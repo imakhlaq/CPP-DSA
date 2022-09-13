@@ -17,13 +17,13 @@ using namespace std;
             while(top<=down && left<=right){
 
                 if(dir==0){
-                    for(int i=0;i<=right;i++){
+                    for(int i=left;i<=right;i++){
                         cout<<mat[top][i];
                     }
                     top++;
                 }
 
-                if(dir==1){
+               else if(dir==1){
                     for(int j=top;j<=down;j++){
                         cout<<mat[j][right];
 
@@ -41,7 +41,7 @@ using namespace std;
 
 
                 else if(dir==3){
-                    for(int l=down;l<=top;l--){
+                    for(int l=down;l>=top;l--){
                         cout<<mat[l][left];
                     }
                     left++;
