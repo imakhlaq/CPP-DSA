@@ -22,8 +22,6 @@ int main(){
     cin>>n;
      
 
-    
-
     while(n>9){
         n=sumOfDigit(n);
 
@@ -38,8 +36,6 @@ int main(){
     else{
         cout<<"Not Magic Number";
     }
-
-
 
         return 0;
     }
