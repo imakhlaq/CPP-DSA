@@ -20,7 +20,7 @@ int main(){
 
 
 
-    int n=sizeof(arr)/sizeof(arr[0]);
+    
     int start,end;
     cin>>start>>end;
     //taking input of sub array to be reverse and passing it to the function
