@@ -10,6 +10,7 @@ int main(){
         int ar[p]={1,2,6,5,3};
 
         /*
+        1-----n 
         to find the missing number find the sum of n( all element in that array including missing m`nymber) natural numbers - sum of array
         */
 
