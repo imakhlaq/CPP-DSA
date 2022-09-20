@@ -46,13 +46,8 @@ int toTotalWater(int arr[],int n){
        for(int i=0;i<n;i++){
         sum+=water[i];
        }
-
-
         return sum;
-
 }
-
-
 int main(){
 
 
@@ -62,10 +57,6 @@ int main(){
         int t=toTotalWater(arr,n);
 
         cout<<t;
-
-
-
-
 
         return 0;
     }
