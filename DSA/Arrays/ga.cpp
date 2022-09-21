@@ -16,11 +16,11 @@ int main(){
 
         for(int i=0;i<p;i++){
 
-            if(arr[i]<0){
+            if(arr[abs(arr[i])-1]<0){
                 dublicate=arr[i];
             }
             else{
-                 arr[abs(arr[i]-1)]=-1*arr[abs(arr[i])-1];
+                 arr[abs(arr[i])-1]=-1*arr[abs(arr[i])-1];
             }
             
         }
@@ -30,7 +30,7 @@ int main(){
 
         for(int i=0;i<p;i++){
             if(arr[i]>0){
-                missingNum=arr[i];
+                missingNum=i+1;
             }
         }
 
@@ -46,8 +46,8 @@ int main(){
 
 
 
-            cout<<arr[abs(dublicate)]<<endl;
-             cout<<arr[missingNum];
+            cout<<dublicate<<endl;
+             cout<<missingNum;
 
         return 0;
     }
