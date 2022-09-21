@@ -7,12 +7,12 @@ using namespace std;
 int main(){
 
 
-        int arr[]={3,4,5,6,7};
+        int arr[]={1,2,3,4,5,6,1};
 
         int n=sizeof(arr)/sizeof(arr[0]);
-        int b=2;
+        int b=3;
 
-        int max=0;
+        int max1=0;
         int sum=0;
 
         
@@ -20,17 +20,19 @@ int main(){
        for(int i=0;i<b;i++){
         sum+=arr[i];
        }
-       max=sum;
+       max1=sum;
 
 
        int j=n-1;
 
        for(int i=b-1;i>=0;i--){
+        sum=sum+arr[j]-arr[i];
+        max1=max(sum,max1);
+        j--;
+       };
 
-       }
 
-
-
+        cout<<max1;
         
             
 
