@@ -33,10 +33,7 @@ int main(){
                 missingNum=i+1;
             }
         }
-
-
-
-
+        
 
 
            for(int x:arr){
