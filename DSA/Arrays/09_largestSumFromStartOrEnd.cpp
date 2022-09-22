@@ -1,7 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
+/*
+card problem u can only pick card from from front or end or combination of these
+*/
 
 
 int main(){
