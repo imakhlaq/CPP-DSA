@@ -47,6 +47,7 @@ using namespace std;
             }
 
         }
+        //i will be -1 is permitaton is not possible
         
                
               int j=n-1;
