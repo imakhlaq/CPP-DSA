@@ -8,6 +8,7 @@ pair of sub array is when % by m is ==0;
 int elmentsModm0(int arr[],int n,int m){
 
     int count [m]={0};
+    //inisilizing count array and saving count arry index as the remainder
     for(int i=0;i<n;i++){
 
         int rem=arr[i]%m;
