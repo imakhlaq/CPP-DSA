@@ -23,6 +23,17 @@ using namespace std;
 
             }
 
+            //more easy
+            /*
+            implement gcd function
+
+            int ans=gcd(arr[0],arr[i]);
+
+            for(int i=0;i<n;i++){
+                ans=gcd(ans,arr[i]);
+            }
+            */
+
            
 
 
