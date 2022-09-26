@@ -29,7 +29,7 @@ using namespace std;
 
             int ans=gcd(arr[0],arr[i]);
 
-            for(int i=0;i<n;i++){
+            for(int i=2;i<n;i++){
                 ans=gcd(ans,arr[i]);
             }
             */
@@ -44,7 +44,8 @@ using namespace std;
 int main(){
 
 
-        vector<int> vec={24,20,32,120,12};
+        // vector<int> vec={24,20,32,120,12};
+        vector<int> vec={3,3,3,4,3};
 
         int n=vecGCD(vec);
 
