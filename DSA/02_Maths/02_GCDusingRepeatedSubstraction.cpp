@@ -35,7 +35,7 @@ int main(){
 
 
 
-        //faster ===========> gcd(a%b,b); a is greater b is smaller
+        //faster ===========> gcd(a%b,b); a is greater b is smaller    T.C==O(log min(a,b))
 
         while(b>0){
             //taking modilo of a(greater)%  b(Smaller) is will produce a small value
