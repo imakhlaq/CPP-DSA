@@ -1,0 +1,6 @@
+/*
+
+your gcd increase when you add more elements
+
+to find the minimum gcd of array elements consider all array elements in gcd
+*/
