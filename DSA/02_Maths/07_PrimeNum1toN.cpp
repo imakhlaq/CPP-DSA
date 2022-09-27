@@ -48,6 +48,7 @@ int main(){
 
 
         //Algo name Sieve of Eratosthenes
+        // TC O(n log(log n))= o(n)
         vector<bool>prime(n+1, 1);
 
         //zero and 1 is not prime so we dont consider it
@@ -55,13 +56,13 @@ int main(){
         prime[1]=false;
 
 
-        for(int i=2;i<=n;i++){
+        for(int i=2;i*i<=n;i++){
 
             if(prime[i]==true){
                 //is you found first number than cross every other its multiple
                 // next multiple will be on i*2
                 //and increse by J+i (2+2=4;4+2=6 ...etc)
-                for(int j=i*2;j<=n;j=j+i){
+                for(int j=i*i;j<=n;j=j+i){
                     prime[j]=false;
                 }
             }
