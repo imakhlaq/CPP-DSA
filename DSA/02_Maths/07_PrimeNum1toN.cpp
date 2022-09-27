@@ -45,6 +45,9 @@ int main(){
         //faster approch
 
         //every number is prime 
+
+
+        //Algo name Sieve of Eratosthenes
         vector<bool>prime(n+1, 1);
 
         //zero and 1 is not prime so we dont consider it
