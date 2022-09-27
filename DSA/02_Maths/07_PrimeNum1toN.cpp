@@ -68,11 +68,17 @@ int main(){
             }
         }
 
+
+        int count=0;
+
         for(int i=0;i<=n;i++){
-            cout<<prime[i]<<" ";
+           
+            if(prime[i]==1){
+                count++;
+            }
         }
         cout<<endl;
-        
+        cout<<count;
 
 
 
