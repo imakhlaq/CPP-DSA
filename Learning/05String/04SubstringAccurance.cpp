@@ -12,10 +12,10 @@ int main(){
         string str2="hello";
             int count=0;
          int n=str1.length();
-         int nk=str2.length();
-           for(int i=0;i<=n-nk;i++){
+         int k=str2.length();
+           for(int i=0;i<=n-k;i++){
 
-            if(str1.substr(i,nk)==str2){
+            if(str1.substr(i,k)==str2){
                 count++;
             }
             
