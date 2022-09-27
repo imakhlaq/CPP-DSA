@@ -48,7 +48,7 @@ int main(){
 
 
         //Algo name Sieve of Eratosthenes
-        // TC O(n log(log n))= o(n)
+        // TC O(n log(log n)) ~ o(n)
         vector<bool>prime(n+1, 1);
 
         //zero and 1 is not prime so we dont consider it
