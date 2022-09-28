@@ -38,13 +38,14 @@ x^0=x;
 */
             int nonDublicate(vector<int>vec){
 
-                    int n=vec[0];
-                for(int i=1;i<vec.size();i++){
-
-                    n=n^vec[i];
+                    int xorr=0;
+                    // num^0=num thats why you can do this
+                for(int i=0;i<vec.size();i++){
+                    
+                    xorr=xorr^vec[i];
                     
                 }
-                return n;
+                return xorr;
             }
 
 
