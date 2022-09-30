@@ -16,6 +16,22 @@ using namespace std;
         return count;
     }
 
+    int bitCount2(int n){
+        int count=0;
+
+        while(n!=0){
+            
+            
+             if(n&1){
+            count++;
+             }
+                
+                 
+            n=n>>1;
+        }
+        return count;
+    }
+
 
 int main(){
 
@@ -23,7 +39,7 @@ int main(){
         int n=5;
 
 
-        int once=bitCount(n);
+        int once=bitCount2(n);
 
         cout<<once;
 
