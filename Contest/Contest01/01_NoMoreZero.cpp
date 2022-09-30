@@ -52,6 +52,26 @@ using namespace std;
                  
             }
         }
+
+        //make the input as n+1 into string and iterate the the string and where you find 0 replace with 0;
+
+
+        string stringVersion (int n){
+             n=n+1;
+            
+               
+             string s=to_string(n);  
+              
+
+
+             for(int i=0;i<s.length();i++){
+                if(s[i]=='0'){
+                    s[i]='1';
+                }
+             }
+              return s;
+
+        }
         
 
 
@@ -63,7 +83,7 @@ int main(){
         cin>>n;
 
         int p=removeZero(n);
-
+        //string p=stringVersion(n);
         cout<<p;
 
 
