@@ -108,7 +108,7 @@ using namespace std;
 
 
 
-        //update not to use array if you zor same number it will be zero 
+        //UPDATE ==>not to use array if you zor same number it will be zero 
         // so in place of arrays we can do this we can sepecificaly take the zor of each elememt that has its bits set and for the nuber that has its bit unset
 
 
@@ -118,10 +118,13 @@ using namespace std;
         
         for(int i=0;i<nums.size();i++){
             if((1<<nosetbit)&nums[i]){
-                    xor1^=nums[i];
+
+                //zor those number that has ith setbit 
+                    xor1=xor1^nums[i];
             }
             else{
-               xor2^=nums[i]; 
+                //zor those number that has ith unsetbit 
+               xor2=xor2^nums[i]; 
             }
         }
 
@@ -142,7 +145,7 @@ int main(){
 
         vector<int> nums={3,6,2,9,2,6};
 
-        vector<int> non=twoUniqueNums(nums);
+        vector<int> non=twoUniqueNums2(nums);
 
 
 
