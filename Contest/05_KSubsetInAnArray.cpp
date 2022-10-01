@@ -11,6 +11,8 @@ using namespace std;
 
 
       //T.C = 0(2^n*n);
+
+      //subset is you can choose any number from array any amount but you cant choose a number twice
         bool posibleKSubset(vector<int>nums,int k){
                 int n=nums.size();
             for(int i=0;i<pow(2,n);i++){
