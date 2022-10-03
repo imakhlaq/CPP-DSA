@@ -1,7 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+    int fac(int n){
 
+        if(n==1){
+            return 1;
+        }
+
+        return fac(n-1)*n;
+    }
 
 
 int main(){
@@ -11,7 +18,7 @@ int main(){
          int n;
          cin>>n;
 
-         cout<<sum(n);
+         cout<<fac(n);
 
 
 
