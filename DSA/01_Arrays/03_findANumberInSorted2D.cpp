@@ -31,8 +31,29 @@ using namespace std;
 
                     bool searchEle(vector<vector<int>>nums,int target){
 
-                        int row=nums.size();
-                        int col=nums[0].size();
+                        
+                        
+                        int i=0;
+                        int j=nums[i].size()-1;
+
+                        while(i<nums.size() && j>=0){
+
+                            if(nums[i][j]==target){
+                               return true;
+                            }
+                            else if (nums[i][j]>target){
+                               j--;
+                            }
+                            else if(nums[i][j]<target){
+                                i++;
+                            }
+
+
+                        }
+
+                        return false;
+
+                        
                     }
 
 
@@ -54,7 +75,7 @@ int main(){
             int target=5;
 
 
-        int num=searchEle(nums,target);
+        bool isfound=searchEle(nums,target);
 
         for(int i=0;i<nums.size();i++){
             for(int j=0;j<nums[0].size();j++){
@@ -63,7 +84,10 @@ int main(){
             cout<<endl;
         }
 
-       // cout<<endl<<num;
+
+    
+
+        cout<<endl<<isfound;
 
 
 
