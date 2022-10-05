@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+            //problem based on temple of bramha in hanoi their are three pillers and one has 64 rings and when they are sifted to the last pillar world is going to end
+
         void towerOfPennoi(int n, char src,char temp,char desti){
 
             if(n==0){
@@ -16,7 +19,7 @@ using namespace std;
             //and after moving nth ring. moving rest of the ring that is in temp(tower) . temp(tower) to destination(tower) using source(tower)
             towerOfPennoi(n-1,temp,src,desti);
         }
-
+    
 
 int main(){
 
