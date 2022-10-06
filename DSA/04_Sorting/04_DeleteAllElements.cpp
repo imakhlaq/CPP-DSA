@@ -2,11 +2,16 @@
 using namespace std;
 
 /*
-delete every elememt from the array and find mim cost ==cost= sum of remaining elementa in the arary
+Q ==delete every elememt from the array and find mim cost ==cost= sum of remaining elementa in the arary
 
-oberservation biggest element incease the sum of the array by alot then remove that element first then next greatest and so on ...... in last remove least element 
+oberservation
+= biggest element incease the sum of the array by alot then remove that element first then next greatest and so on ...... in last remove smallest element 
 
-first sort the array in increasing order and then make prefix sum array of that( for max postfix sum array)
+1=first sort the array in increasing order and 
+
+
+2=then make prefix sum array of that( for max postfix sum array) and add evey
+    elemement of prefix sum array
 */
 
         void insertionSort(int arr[],int n){
