@@ -18,6 +18,9 @@ using namespace std;
     }
 
         //If only string input is given in function . then create a function by yourserlf and return its value.
+
+
+        //AND ALWAYS PASS STRING BY REFRENCE
 int main(){
 
 
