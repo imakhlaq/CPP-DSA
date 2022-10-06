@@ -1,11 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+        //picking minimun element for each element
+
         void selectionSort(int arr[],int n){
 
             for(int i=0;i<n;i++){
                 for(int j=i+1;j<n;j++){
-                    if(arr[i]>arr[j]){
+                   // if(arr[i]>=arr[j]){  stable
+                    if(arr[i]>arr[j]){      // unstable
                         swap(arr[i],arr[j]);
                     }
                     
