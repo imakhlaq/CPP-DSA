@@ -5,7 +5,14 @@ bool comp(pair<string, int> p1, pair<string, int> p2) {
 
    if (p1.second < p2.second) {
       return true;
-   } else {
+   }
+   // if two student hava same number then show by name lexographically
+   // accending
+   else if (p1.second == p2.second && p1.first < p1.first) {
+      return true;
+   }
+
+   else {
       return false;
    }
 }
@@ -15,6 +22,7 @@ int main() {
    vector<pair<string, int>> data;
 
    data.push_back(make_pair("Akhlaq", 100));
+   data.push_back(make_pair("xkhlaq", 100));
    data.push_back(make_pair("Yogesh", 32));
    data.push_back(make_pair("Tanvi", 3));
    data.push_back(make_pair("Mohit", 39));
