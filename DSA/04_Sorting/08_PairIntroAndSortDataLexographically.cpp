@@ -3,7 +3,7 @@ using namespace std;
 
 bool comp(pair<string, int> p1, pair<string, int> p2) {
 
-   if (p1.first < p2.first) {
+   if (p1.second < p2.second) {
       return true;
    } else {
       return false;
