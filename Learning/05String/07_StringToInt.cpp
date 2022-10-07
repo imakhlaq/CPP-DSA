@@ -1,51 +1,40 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
+int convert(string str) {
 
+   int num = 0;
 
-    int convert(string str){
+   int i = 0;
+   while (str.length() > i) {
 
-        int num=0;
-        
-        int i=0;
-        while(str.length()>i){
+      int a = str[i];
 
-            int a=str[i];
+      a = a - 48;
 
-             a=a-48;
+      num = num * 10 + a;
 
-            num=num*10+a;
+      i++;
+   }
+   return num;
+}
 
-            i++;
-       
-        }
-        return num;
-    }
-  
+int main() {
 
-int main(){
+   string str = "12";
+   string str1 = "3";
 
+   int num = convert(str);
+   int num2 = convert(str1);
+   int mul = num * num2;
 
-        string str="12";
-        string str1="3";
+   stringstream s;
+   s << mul;
 
-        int num=convert(str);
-        int num2=convert(str1);
-        int mul=num*num2;
-        
+   string str3;
 
+   s >> str3;
+   cout << str3;
 
-        stringstream s;
-        s<<mul;
-
-        string str3;
-
-        s>>str3;
-        cout<<str3;
-        
-
-
-
-
-        return 0;
-    }
+   return 0;
+}
