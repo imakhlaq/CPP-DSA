@@ -23,9 +23,12 @@ int main(){
 
 
          int arr[]={3,32,4,1,4,53,6};
-         int n=sizeof(arr)/sizeof(arr[0]);
+
+          int n=sizeof(arr)/sizeof(arr[0]);
 
          selectionSort(arr,n);
+
+         
 
             for(int x:arr){
                 cout<<x<<" ";
