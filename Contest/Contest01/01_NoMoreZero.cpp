@@ -11,81 +11,67 @@ input ==> output
 and its gurented n does not contain zeros
 */
 
-// my logic is if a n+1 check if any of the digit contain O if it does then increse the value 1 to 2 if it does not contain just return n+1;
+// my logic is if a n+1 check if any of the digit contain O if it does then
+// increse the value 1 to 2 if it does not contain just return n+1;
 
-
-
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
+bool isContainZero(int n) {
+   while (n > 0) {
+      int digit = n % 10;
+      if (digit == 0) {
+         return true;
+      }
+      n = n / 10;
+   }
+   return false;
+}
 
-        bool isContainZero(int n ){
-            while(n>0){
-                int digit =n%10;
-                if(digit==0){
-                    return true;
-                }
-                n=n/10;
-            }
-            return false;
-        }
+int removeZero(int n) {
 
-        int removeZero(int n){
+   if (n < 9) {
+      return n + 1;
+   }
 
-            if(n<9){
-                return n+1;
-            }
+   int i = 1;
 
+   while (true) {
 
+      int p = n + i;
 
-            int i=1;
+      if (isContainZero(p) == 0) {
+         return p;
+      }
 
-            while(true){
+      i++;
+   }
+}
 
-            int p=n+i;
+// make the input as n+1 into string and iterate the the string and where you
+// find 0 replace with 0;
 
-                if(isContainZero(p)==0){
-                    return p;   
-                }
+string stringVersion(int n) {
+   n = n + 1;
 
-                i++;
-                 
-            }
-        }
+   string s = to_string(n);
 
-        //make the input as n+1 into string and iterate the the string and where you find 0 replace with 0;
+   for (int i = 0; i < s.length(); i++) {
+      if (s[i] == '0') {
+         s[i] = '1';
+      }
+   }
+   return s;
+}
 
+int main() {
 
-        string stringVersion (int n){
-             n=n+1;
-            
-               
-             string s=to_string(n);  
-              
+   int n;
+   cin >> n;
 
+   int p = removeZero(n);
+   // string p=stringVersion(n);
+   cout << p;
 
-             for(int i=0;i<s.length();i++){
-                if(s[i]=='0'){
-                    s[i]='1';
-                }
-             }
-              return s;
-
-        }
-        
-
-
-
-
-int main(){
-
-        int n;
-        cin>>n;
-
-        int p=removeZero(n);
-        //string p=stringVersion(n);
-        cout<<p;
-
-
-        return 0;
-    }
+   return 0;
+}

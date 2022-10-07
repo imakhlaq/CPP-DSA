@@ -1,75 +1,57 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-     int maxofarr(vector<int>sub){
+int maxofarr(vector<int> sub) {
 
-        
-            int max1=INT_MIN;
+   int max1 = INT_MIN;
 
-            for(int a:sub){
-                
-                max1=max(max1,a);
+   for (int a : sub) {
 
-                cout<<a<<" ";
-                
-            }
-            cout<<endl;
-           
-            return max1;
-        }
+      max1 = max(max1, a);
 
-    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+      cout << a << " ";
+   }
+   cout << endl;
 
-        vector<int>window;
+   return max1;
+}
 
-            int j=0;
-            int i=0;
+vector<int> maxSlidingWindow(vector<int>& nums, int k) {
 
-            int forsub=0;
+   vector<int> window;
 
-            vector<int> sub(k);
-          while(j<nums.size()){
-            
-                sub[forsub]=nums[j];
-                     forsub++;
-                
+   int j = 0;
+   int i = 0;
 
-                if(j-i+1<k){
-                    
-                    
-                    j++;
-                }
-                else if(j-i+1==k){
-                    
-                    
+   int forsub = 0;
 
-                    window.push_back(maxofarr(sub));
-                    ++i; 
-                    j=i;
-                    
-                     
-                    forsub=0;
-                    
-                    
-                }
+   vector<int> sub(k);
+   while (j < nums.size()) {
 
-          }
-          return window;
-        
-    }
+      sub[forsub] = nums[j];
+      forsub++;
 
+      if (j - i + 1 < k) {
 
-int main(){
+         j++;
+      } else if (j - i + 1 == k) {
 
-        vector<int>nums={1,3,-1,-3,5,3,6,7};
-        
-        int k=3;
+         window.push_back(maxofarr(sub));
+         ++i;
+         j = i;
 
-        vector<int>num= maxSlidingWindow(nums, k);
+         forsub = 0;
+      }
+   }
+   return window;
+}
 
-       
+int main() {
 
+   vector<int> nums = {1, 3, -1, -3, 5, 3, 6, 7};
 
+   int k = 3;
 
+   vector<int> num = maxSlidingWindow(nums, k);
 
-        return 0;
-    }
+   return 0;
+}
