@@ -1,26 +1,23 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
+int TrailingZerosInFactorial(int num) {
+   int zeros = 0;
+   while (num > 0) {
+      zeros = zeros + num / 5;
+      num = num / 5;
+   }
 
-int TrailingZerosInFactorial(int num){
-    int zeros=0;
-    while(num>0){
-        zeros=zeros+num/5;
-        num=num/5;
-
-    }
-    
-    return zeros;
+   return zeros;
 }
 
-int main(){
+int main() {
 
-      int num;
-        cout<<"Enter a number :";
-        cin>>num;
-        int numberOfZeros=TrailingZerosInFactorial(num);
-        cout<<numberOfZeros;
+   int num;
+   cout << "Enter a number :";
+   cin >> num;
+   int numberOfZeros = TrailingZerosInFactorial(num);
+   cout << numberOfZeros;
 
-
-        return 0;
-    }
+   return 0;
+}
