@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 /*
@@ -9,16 +9,4 @@ to make a lexiographically wave array
         eg 0 with 1 ,2 with 3, 4 with 5 .......
 */
 
-
-
-
-int main(){
-
-
-         
-
-
-
-
-        return 0;
-    }
+int main() { return 0; }

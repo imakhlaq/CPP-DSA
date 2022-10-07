@@ -1,27 +1,20 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
+bool comp(char x, char y) {
+   if (x < y) {
+      return true;
+   }
+   return false;
+}
 
-    bool comp(char x,char  y){
-        if(x<y){
-            return true;
-        }
-        return false;
-    }
+int main() {
 
-        
+   string str = "asbfcdfrsfg";
 
+   sort(str.begin(), str.end(), comp);
 
-int main(){
+   cout << str;
 
-
-         string str="asbfcdfrsfg";
-
-        sort(str.begin(),str.end(),comp);
-
-        cout<<str;
-
-
-
-        return 0;
-    }  
+   return 0;
+}
