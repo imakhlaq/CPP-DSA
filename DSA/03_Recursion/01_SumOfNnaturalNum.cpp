@@ -1,29 +1,21 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
+int sum(int n) {
 
+   if (n == 0) {
+      return 0;
+   }
 
-    int sum(int n){
+   return sum(n - 1) + n;
+}
 
-        if(n==0){
-            return 0;
-        }
+int main() {
 
-        return sum(n-1)+n;
-    }
+   int n;
+   cin >> n;
 
+   cout << sum(n);
 
-
-int main(){
-
-
-         int n;
-         cin>>n;
-
-         cout<<sum(n);
-
-
-
-
-        return 0;
-    }
+   return 0;
+}
