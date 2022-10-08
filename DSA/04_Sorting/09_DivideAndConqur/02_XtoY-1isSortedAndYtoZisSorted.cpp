@@ -10,17 +10,38 @@ void sortNotSortedElement(vector<int> &nums, int x, int y, int z) {
    int p1 = x;
    int p2 = y;
 
-   while (p1 < y && p2 < z) {
+   vector<int> temp;
 
-      while (nums[p1] < nums[p2] && p1 < y) {
+   while (p1 < y && p2 <= z) {
 
+      if (nums[p1] <= nums[p2]) {
+         temp.push_back(nums[p1]);
+         p1++;
+
+      }
+
+      else {
+         temp.push_back(nums[p2]);
          p2++;
       }
+   }
 
-      while (nums[p1] > nums[p2] && p2 < z) {
-         swap(nums[p1], nums[p2]);
-         p1++;
-      }
+   // taking care of remainig element of array that are reft after one is
+   // completed
+
+   while (p1 < y) {
+      temp.push_back(nums[p1]);
+      p1++;
+   }
+   while (p2 <= z) {
+      temp.push_back(nums[p2]);
+      p2++;
+   }
+
+   // upadating original array
+
+   for (int i = x; i <= z; i++) {
+      nums[i] = temp[i - 2];
    }
 }
 
