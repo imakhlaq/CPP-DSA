@@ -47,11 +47,11 @@ void mergeSort(int nums[], int low, int high) {
 
 int main() {
 
-   int nums[] = {54, 1, 43, 3, 4, 57, 74, 32, 4, 2, 4};
+   int nums[] = {1, 3, 42, 32, 4, 3, 68};
    int n = sizeof(nums) / sizeof(nums[0]);
    int low = 0;
 
-   mergeSort(nums, low, n);
+   mergeSort(nums, low, n - 1);
 
    for (int i = 0; i < n; i++) {
       cout << nums[i] << " ";
