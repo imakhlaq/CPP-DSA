@@ -15,7 +15,7 @@ vector<int> mergeArray(int arr1[], int n1, int arr2[], int n2) {
          i++;
       }
       // cehking for if Second array 0th element is samller than till
-      if (arr1[i] > arr2[j]) {
+      else {
          ans.push_back(arr2[j]);
          j++;
       }
