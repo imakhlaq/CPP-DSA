@@ -7,7 +7,7 @@ void insertionSort(int arr[], int n) {
       // 0 to i is sorted
       for (int j = i; j >= 0; j--) {
 
-         if (arr[j + 1] < arr[j]) {
+         if (arr[j] > arr[j + 1]) {
             swap(arr[j + 1], arr[j]);
          }
       }

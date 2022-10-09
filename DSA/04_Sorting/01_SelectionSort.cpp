@@ -5,7 +5,7 @@ using namespace std;
 
 void selectionSort(int arr[], int n) {
 
-   for (int i = 0; i < n; i++) {
+   for (int i = 0; i < n - 1; i++) {
       for (int j = i + 1; j < n; j++) {
          // if(arr[i]>=arr[j]){  stable
          if (arr[i] > arr[j]) {  // unstable
@@ -17,7 +17,7 @@ void selectionSort(int arr[], int n) {
 
 int main() {
 
-   int arr[] = {3, 32, 4, 1, 4, 53, 6};
+   int arr[] = {3, 32, 4, 1, 4, 53, 6, 99, 0};
 
    int n = sizeof(arr) / sizeof(arr[0]);
 
