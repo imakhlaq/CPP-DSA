@@ -5,20 +5,23 @@ using namespace std;
 rearrange the given array between the index L to H
 */
 
-void reArrangeFromLtoH(int arr[], int n, int l, int h) {
+void reArrangeFromLtoH(int arr[], int low, int high) {
 
-   int p1 = l + 1;
-   int p2 = h - 1;
+   int p1 = low + 1;
+   int p2 = high;
 
    while (p1 < p2) {
-      if (arr[p1] < arr[l]) {
+      if (arr[p1] < arr[low]) {
          p1++;
-      } else if (arr[p2] >= arr[l]) {
+      } else if (arr[p2] >= arr[low]) {
          p2--;
       } else {
          swap(arr[p1], arr[p2]);
+         p1++;
+         p2--;
       }
    }
+   swap(arr[low], arr[p1 - 1]);
 }
 
 int main() {
@@ -28,7 +31,7 @@ int main() {
    int l = 2;
    int h = 8;
 
-   reArrangeFromLtoH(arr, n, l, h);
+   reArrangeFromLtoH(arr, l, h);
 
    for (int x : arr) {
       cout << x << " ";

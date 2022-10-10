@@ -16,6 +16,7 @@ void mergeSortedParts(int nums[], int low, int mid, int high) {
          p2++;
       }
    }
+   // taking care of remaing element
    while (p1 < mid) {
       temp.push_back(nums[p1]);
       p1++;
@@ -38,10 +39,11 @@ void mergeSort(int nums[], int low, int high) {
       return;
    }
    int mid = (low + high) / 2;
-
+   // recursive call for one half
    mergeSort(nums, low, mid);
+   // recursive call for onther half
    mergeSort(nums, mid + 1, high);
-
+   // merging array
    mergeSortedParts(nums, low, mid + 1, high);
 }
 
