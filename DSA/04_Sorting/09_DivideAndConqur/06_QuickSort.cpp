@@ -2,43 +2,43 @@
 using namespace std;
 
 int rearrange(int arr[], int low, int high) {
-   //    int i = low + 1;
-   //    int j = high - 1;
+   int i = low + 1;
+   int j = high - 1;
 
-   //    while (i < j) {
-   //       if (arr[i] < arr[low]) {
-   //          i++;
-   //       } else if (arr[j] >= arr[low]) {
-   //          j--;
-   //       } else {
-   //          swap(arr[j], arr[i]);
-   //          i++;
-   //          j--;
-   //       }
-   //    }
-   //    swap(arr[low], arr[i - 1]);
-   //    return i;
-
-   int pivot = arr[high];
-   int i = (low - 1);  // index of smaller element
-   for (int j = low; j < high; j++) {
-      // If current element is smaller than the pivot
-      if (arr[j] < pivot) {
+   while (i < j) {
+      if (arr[i] < arr[low]) {
          i++;
-
-         // swap arr[i] and arr[j]
-         int temp = arr[i];
-         arr[i] = arr[j];
-         arr[j] = temp;
+      } else if (arr[j] >= arr[low]) {
+         j--;
+      } else {
+         swap(arr[j], arr[i]);
+         i++;
+         j--;
       }
    }
+   swap(arr[low], arr[i - 1]);
+   return i;
 
-   // swap arr[i+1] and arr[high] (or pivot)
-   int temp = arr[i + 1];
-   arr[i + 1] = arr[high];
-   arr[high] = temp;
+   // int pivot = arr[high];
+   // int i = (low - 1);  // index of smaller element
+   // for (int j = low; j < high; j++) {
+   //    // If current element is smaller than the pivot
+   //    if (arr[j] < pivot) {
+   //       i++;
 
-   return i + 1;
+   //       // swap arr[i] and arr[j]
+   //       int temp = arr[i];
+   //       arr[i] = arr[j];
+   //       arr[j] = temp;
+   //    }
+   // }
+
+   // // swap arr[i+1] and arr[high] (or pivot)
+   // int temp = arr[i + 1];
+   // arr[i + 1] = arr[high];
+   // arr[high] = temp;
+
+   // return i + 1;
 }
 void quickSortAlgo(int arr[], int low, int high) {
 
