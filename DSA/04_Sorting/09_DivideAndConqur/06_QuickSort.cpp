@@ -10,25 +10,42 @@ worst case TC= 0(N^2);
 when array is sorted. because when you divide each element is seprated in hal
 only 1 element other half have lot more eg === 1= (nothing in first half): 2 3 4
 5 6 7 8 9 (lot in second half) 1,2,3,4,5,6,7,8,9
+
+
+
+
+3 2 1 5 4 === when we do on bases of three 2 1 3 5 4
+                                               her 3 is in center(pivot) so this
+is the best case because bith side of 3 there are equal numbers (even their not
+equal one is not drastically bigger than other than its fine)
+
+
+the bases on we are doing arrangement is called piviot element 3 in this case
+
+
+
+to fix this worst case lets randomize the piviot(on the bases we are making
+changes)
+rand() ==> this genrate random number (it is balance )
 */
 
 int rearrange(int arr[], int low, int high) {
    int i = low + 1;
-   int j = high - 1;
+   int j = high;
 
-   while (i < j) {
+   while (i <= j) {
       if (arr[i] < arr[low]) {
          i++;
       } else if (arr[j] >= arr[low]) {
          j--;
       } else {
-         swap(arr[j], arr[i]);
+         swap(arr[i], arr[j]);
          i++;
          j--;
       }
    }
    swap(arr[low], arr[i - 1]);
-   return i;
+   return i - 1;
 
    // int pivot = arr[high];
    // int i = (low - 1);  // index of smaller element
@@ -64,7 +81,7 @@ void quickSortAlgo(int arr[], int low, int high) {
 
 int main() {
 
-   int arr[] = {1, 3, 42, 32, 4, 3, 68};
+   int arr[] = {1, 3, 42, 32, 4, 3, 68, 231};
    int high = sizeof(arr) / sizeof(arr[0]);
    int low = 0;
    quickSortAlgo(arr, low, high - 1);
