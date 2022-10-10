@@ -1,5 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
+/*
+best case TC= O(nlogn);
+
+worst case TC= 0(N^2);
+when array is sorted
+*/
 
 int rearrange(int arr[], int low, int high) {
    int i = low + 1;
