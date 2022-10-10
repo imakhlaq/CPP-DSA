@@ -2,9 +2,14 @@
 using namespace std;
 /*
 best case TC= O(nlogn);
+when both the side have equlibraim when choosing element the element must have
+some value before it=====4,23,43,41,1,2,3
+when divided 4: 1 2 3 :23 41 43
 
 worst case TC= 0(N^2);
-when array is sorted
+when array is sorted. because when you divide each element is seprated in hal
+only 1 element other half have lot more eg === 1= (nothing in first half): 2 3 4
+5 6 7 8 9 (lot in second half) 1,2,3,4,5,6,7,8,9
 */
 
 int rearrange(int arr[], int low, int high) {
