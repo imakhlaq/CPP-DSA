@@ -12,7 +12,7 @@ int main() {
       swap(a, b);
    }
 
-     // faster ===========> gcd(a%b,b); a is greater b is smaller    T.C==O(log
+   // faster ===========> gcd(a%b,b); a is greater b is smaller    T.C==O(log
    // min(a,b))
 
    while (b > 0) {
