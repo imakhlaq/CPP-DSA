@@ -42,12 +42,14 @@ int bitCount3(int n) {
    return count;
 }
 
+
+
 int main() {
 
-   int n = 5;
+   int n = 17;
 
-   int once = bitCount3(n);
-
+    int once = bitCount2(n);
+   
    cout << once;
 
    return 0;

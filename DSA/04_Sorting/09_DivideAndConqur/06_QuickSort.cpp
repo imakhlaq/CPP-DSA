@@ -81,7 +81,7 @@ void quickSortAlgo(int arr[], int low, int high) {
 
 int main() {
 
-   int arr[] = {1, 3, 42, 32, 4, 3, 68, 231};
+   int arr[] = {24, 18, 38, 43, 14, 40, 1, 54};
    int high = sizeof(arr) / sizeof(arr[0]);
    int low = 0;
    quickSortAlgo(arr, low, high - 1);

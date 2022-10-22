@@ -49,7 +49,7 @@ void mergeSort(int nums[], int low, int high) {
 
 int main() {
 
-   int nums[] = {1, 3, 42, 32, 4, 3, 68};
+   int nums[] = {4, 1, 3, 9, 7};
    int n = sizeof(nums) / sizeof(nums[0]);
    int low = 0;
 
