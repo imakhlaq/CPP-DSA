@@ -4,6 +4,7 @@ int mergeArrays(int arr[], int low, int mid, int high) {
    int p1 = low;
    int p2 = mid;
    vector<int> temp;
+   int count = 0;
    while (p1 < mid && p2 <= high) {
       if (arr[p1] <= arr[p2]) {
          temp.push_back(arr[p1]);
@@ -11,8 +12,12 @@ int mergeArrays(int arr[], int low, int mid, int high) {
       } else {
          temp.push_back(arr[p2]);
          p2++;
+
+         // counting
+         count += mid - p1;
       }
    }
+   // contribution is zero here in both
    while (p1 < mid) {
       temp.push_back(arr[p1]);
       p1++;
@@ -21,6 +26,7 @@ int mergeArrays(int arr[], int low, int mid, int high) {
       temp.push_back(arr[p2]);
       p2++;
    }
+   return count;
 }
 
 int inversion(int arr[], int low, int high) {
@@ -43,7 +49,8 @@ int main() {
    int n = sizeof(nums) / sizeof(nums[0]);
    int low = 0;
 
-   inversion(nums, low, n - 1);
+   int i = inversion(nums, low, n - 1);
+   cout << i;
 
    return 0;
 }
