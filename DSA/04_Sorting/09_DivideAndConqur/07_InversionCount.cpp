@@ -26,6 +26,9 @@ int mergeArrays(int arr[], int low, int mid, int high) {
       temp.push_back(arr[p2]);
       p2++;
    }
+   for (int i = low; i <= high; i++) {
+      arr[i] = temp[low - i];
+   }
    return count;
 }
 
