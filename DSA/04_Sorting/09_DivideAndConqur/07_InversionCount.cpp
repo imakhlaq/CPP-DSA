@@ -27,7 +27,7 @@ int mergeArrays(int arr[], int low, int mid, int high) {
       p2++;
    }
    for (int i = low; i <= high; i++) {
-      arr[i] = temp[low - i];
+      arr[i] = temp[i - low];
    }
    return count;
 }
@@ -48,7 +48,7 @@ int inversion(int arr[], int low, int high) {
 }
 int main() {
 
-   int nums[] = {4, 1, 3, 9, 7};
+   int nums[] = {2, 3, 4, 5, 6};
    int n = sizeof(nums) / sizeof(nums[0]);
    int low = 0;
 
