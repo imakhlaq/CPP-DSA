@@ -6,15 +6,13 @@ int makeArrayUnique(int arr[], int n) {
    sort(arr + 0, arr + n);
    // then transver the array and if you found a element which is less than
    // previous element increment it untill its bigger than previous element
-
+   int operation = 0;
    for (int i = 1; i < n; i++) {
       //      2           2
       if (arr[i - 1] >= arr[i]) {
-
-         while (arr[i] < arr[i - 1]) {
-            int temp = arr[i];
-            temp++;
-            arr[i] = temp;
+         while (arr[i] <= arr[i - 1]) {
+            arr[i]++;
+            operation++;
          }
       }
    }
@@ -22,14 +20,16 @@ int makeArrayUnique(int arr[], int n) {
    for (int i = 0; i < n; i++) {
       cout << arr[i] << " ";
    }
+
+   return operation;
 }
 
 int main() {
 
-   int arr[] = {2, 3, 3, 2, 4, 7};
+   int arr[] = {2, 3, 2, 4, 4};
    int n = sizeof(arr) / sizeof(arr[0]);
 
-   makeArrayUnique(arr, n);
-
+   int ans = makeArrayUnique(arr, n);
+   cout << endl << ans;
    return 0;
 }
