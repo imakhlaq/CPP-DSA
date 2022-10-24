@@ -11,8 +11,9 @@ bool checkbit(int i, int j) {
 
 // T.C = 0(2^n*n);
 
-// subset is you can choose any number from array any amount but you cant choose
-// a number twice
+/* subset is you can choose any number from array any amount but you cant choose
+  a number twice */
+
 bool posibleKSubset(vector<int> nums, int k) {
    int n = nums.size();
    // making every possible combination using truth table thig
