@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
+in array find and sub array if we sort that array then our array is sorted
+*/
+
 void minsubArrayToSort(int arr[], int n) {
 
    int l = 1;
