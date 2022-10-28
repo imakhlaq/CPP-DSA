@@ -1,6 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
-/*floor means fing a value for k which is <=k*/
+/*floor means fing a value for k which is <=k
+
+
+=========
+seal means fing a value for k which is >=k
+*/
 void find1floor(int arr[], int n, int target) {
    int ans = INT_MIN;
 
