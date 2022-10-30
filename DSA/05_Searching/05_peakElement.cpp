@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 /*peak element is ==> arr[mid-1]<arr[mid]>arr[mid+1];
+
+all the elemensts are distinct
  */
 int peakElement(int arr[], int n) {
 
