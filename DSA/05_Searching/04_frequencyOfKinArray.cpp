@@ -42,7 +42,7 @@ int frequencyOfK(int arr[], int n, int k) {
          // because we are finding rigth if we found one the we will keep moving
          // till we find last accorance and store in right varible
          //. last accorance will always be in start=mid+1 so moving start to
-         //mid+1
+         // mid+1
          start = mid + 1;
       } else if (arr[mid] < k) {
          start = mid + 1;
@@ -60,7 +60,7 @@ int main() {
 
    int arr[] = {-5, -5, -3, 0, 0, 1, 1, 5, 5, 5, 5, 5, 5, 8, 10, 10, 15, 15};
    int n = sizeof(arr) / sizeof(arr[0]);
-
+   
    int k;
    cin >> k;
 

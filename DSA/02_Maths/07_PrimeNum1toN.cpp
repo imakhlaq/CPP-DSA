@@ -60,7 +60,7 @@ int main() {
    }
 
    int count = 0;
-
+   // for less than remove i<=n to i<n
    for (int i = 0; i <= n; i++) {
 
       if (prime[i] == 1) {
