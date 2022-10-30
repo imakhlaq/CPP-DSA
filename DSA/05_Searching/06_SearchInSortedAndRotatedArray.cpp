@@ -63,6 +63,7 @@ for checking use if(arr[0]<=arr[mid]){
 #include <bits/stdc++.h>
 using namespace std;
 
+
 int findK(int arr[], int n) {
 
    int start = 0;
@@ -76,10 +77,12 @@ int findK(int arr[], int n) {
       if (arr[mid] >= arr[0]) {
          start = mid + 1;
       } else if (arr[0] > arr[mid]) {
+         //updating k because we are finding the first index of right half and every time mid is in right half we update the ansewer
          k = mid;
          end = mid - 1;
       }
    }
+    
    return k;
 }
 
