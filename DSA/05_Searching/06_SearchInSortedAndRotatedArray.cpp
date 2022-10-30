@@ -94,5 +94,14 @@ int main() {
    int ans = findK(arr, n);
    cout << ans;
 
+   // after this do binary search in both array
+
+   if(arr[ans]<target){
+      // do binary search in (arr,0,k-1)
+
+   }else if(arr[ans]>=target){
+      //do binary search in (arr,n-1,k)
+   }
+
    return 0;
 }
