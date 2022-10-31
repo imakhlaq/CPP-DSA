@@ -88,7 +88,7 @@ int findK(int arr[], int n) {
 
 int main() {
 
-   int arr[] = {5, 8, 10, 14, 18, 23, -15, -9, -6, 0, 2};
+   int arr[] = {3,5,1};
    int n = sizeof(arr) / sizeof(arr[0]);
    int target = -9;
    int ans = findK(arr, n);
