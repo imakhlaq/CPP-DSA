@@ -11,7 +11,7 @@ string linearSearch(int arr[], int n, int target) {
 
 int main() {
 
-   int arr[] = {1, 2, 4, 5, 7, 3, 4, 12, 4, 35};
+   int arr[] = {1, 2, 4, 5, 7, 3, 4, 12, 4, 35, 32};
    int n = sizeof(arr) / sizeof(arr[0]);
 
    int target = 12;
